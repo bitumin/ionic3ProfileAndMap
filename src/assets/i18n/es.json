@@ -1,0 +1,25 @@
+{
+  "TABS": {
+    "PROFILE": "Mi perfil",
+    "MAP": "Mapa"
+  },
+  "GMAP_MY_POSITION": {
+    "MAP_TITLE": "Mapa",
+    "LATITUDE": "Latitud",
+    "LONGITUDE": "Longitud",
+    "GET_MY_POSITION_BUTTON_LABEL": "Obtener mi posición",
+    "MY_POSITION_LABEL": "Mi posición"
+  },
+  "PROFILE_FORM": {
+    "USER_INFO": "Información de usuario",
+    "USERNAME_LABEL": "Nombre de usuario",
+    "USERNAME_PLACEHOLDER": "Juan Nieve",
+    "EMAIL_LABEL": "Correo electrónico",
+    "EMAIL_PLACEHOLDER": "juan.nieve@poniente.po",
+    "PROFILE": "Perfil",
+    "DESCRIPTION_DEFAULT": "No sé nada"
+  },
+  "PICTURE_PICKER": {
+    "CHOOSE_AN_OPTION": "Elige una opción"
+  }
+}

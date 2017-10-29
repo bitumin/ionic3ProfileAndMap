@@ -1,0 +1,25 @@
+{
+  "TABS": {
+    "PROFILE": "Profile",
+    "MAP": "Map"
+  },
+  "GMAP_MY_POSITION": {
+    "MAP_TITLE": "Maps",
+    "LATITUDE": "Latitude",
+    "LONGITUDE": "Longitude",
+    "GET_MY_POSITION_BUTTON_LABEL": "Get my position",
+    "MY_POSITION_LABEL": "My position"
+  },
+  "PROFILE_FORM": {
+    "USER_INFO": "User info",
+    "USERNAME_LABEL": "Username",
+    "USERNAME_PLACEHOLDER": "Jon Snow",
+    "EMAIL_LABEL": "Email",
+    "EMAIL_PLACEHOLDER": "jon.snow@westeros.wi",
+    "PROFILE": "Profile",
+    "DESCRIPTION_DEFAULT": "I know nothing"
+  },
+  "PICTURE_PICKER": {
+    "CHOOSE_AN_OPTION": "Choose an option"
+  }
+}

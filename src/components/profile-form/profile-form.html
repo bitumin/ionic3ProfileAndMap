@@ -1,4 +1,21 @@
-<!-- Generated template for the ProfileFormComponent component -->
-<div>
-  {{text}}
-</div>
+<ion-item-group>
+  <ion-item-divider>
+    {{ 'PROFILE_FORM.USER_INFO' | translate }}
+  </ion-item-divider>
+  <ion-item>
+    <ion-label fixed>{{ 'PROFILE_FORM.USERNAME_LABEL' | translate }}</ion-label>
+    <ion-input type="text" name="username" placeholder="{{ 'PROFILE_FORM.USERNAME_PLACEHOLDER' | translate }}" text-right></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label fixed>{{ 'PROFILE_FORM.EMAIL_LABEL' | translate }}</ion-label>
+    <ion-input type="email" name="email" placeholder="{{ 'PROFILE_FORM.EMAIL_PLACEHOLDER' | translate }}" text-right></ion-input>
+  </ion-item>
+</ion-item-group>
+<ion-item-group>
+  <ion-item-divider>
+    {{ 'PROFILE_FORM.PROFILE' | translate }}
+  </ion-item-divider>
+  <ion-item>
+    <ion-textarea name="description" value="{{ 'PROFILE_FORM.DESCRIPTION_DEFAULT' | translate }}"></ion-textarea>
+  </ion-item>
+</ion-item-group>
