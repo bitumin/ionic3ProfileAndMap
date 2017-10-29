@@ -1,3 +1,15 @@
 profile-form {
-
+  .item-divider {
+    background-color: transparent;
+  }
+  .item-divider-ios {
+    text-transform: uppercase;
+    .label {
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+  }
+  .item-input .label-md {
+    color: black;
+  }
 }

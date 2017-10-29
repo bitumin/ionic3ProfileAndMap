@@ -10,7 +10,10 @@ import { TranslateService } from '@ngx-translate/core';
 export class MyApp {
   rootPage: string = 'TabsPage';
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, translateService: TranslateService) {
+  constructor(platform: Platform,
+              statusBar: StatusBar,
+              splashScreen: SplashScreen,
+              translateService: TranslateService) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.

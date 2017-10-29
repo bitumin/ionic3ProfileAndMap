@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
  * Components.
  */
 @Component({
-  selector: 'profile-picture-picker',
-  templateUrl: 'profile-picture-picker.html'
+  selector: 'picture-picker',
+  templateUrl: 'picture-picker.html'
 })
-export class ProfilePicturePickerComponent {
+export class PicturePickerComponent {
 
   text: string;
 
