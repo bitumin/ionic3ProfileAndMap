@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>ModalChoosePictureSource</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="dismissModal()">
+        Close
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-buttons end>
+    <button ion-button (click)="dismissModal('camera')">
+      Camera
+    </button>
+    <button ion-button (click)="dismissModal('localFile')">
+      Local file
+    </button>
+  </ion-buttons>
+</ion-content>

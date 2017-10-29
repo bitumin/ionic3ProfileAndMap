@@ -1,4 +1,59 @@
-<!-- Generated template for the GoogleMapMyPositionComponent component -->
-<div>
-  {{text}}
-</div>
+<ion-grid>
+  <ion-row>
+    <ion-col col-12>
+
+      <!--Map card-->
+      <ion-card>
+        <ion-card-header>
+          {{ 'GMAP_MY_POSITION.MAP_TITLE' | translate }}
+        </ion-card-header>
+        <ion-card-content>
+          <!--Here goes the map with the label {{ 'GMAP_MY_POSITION.MY_POSITION_LABEL' | translate }}!-->
+          <div id="my-position-map"></div>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-6>
+
+      <!--Latitude card-->
+      <ion-card>
+        <ion-card-header>
+          {{ 'GMAP_MY_POSITION.LATITUDE' | translate }}
+        </ion-card-header>
+        <ion-card-content>
+          {{myLatitude}}
+        </ion-card-content>
+      </ion-card>
+
+    </ion-col>
+    <ion-col col-6>
+
+      <!--Longitude card-->
+      <ion-card>
+        <ion-card-header>
+          {{ 'GMAP_MY_POSITION.LONGITUDE' | translate }}
+        </ion-card-header>
+        <ion-card-content>
+          {{myLongitude}}
+        </ion-card-content>
+      </ion-card>
+
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-12>
+
+      <!--Get my position button-->
+      <ion-buttons>
+        <button ion-button block icon-left (click)="getMyPosition()">
+          <ion-icon name="pin"></ion-icon>
+          {{ 'GMAP_MY_POSITION.GET_MY_POSITION_BUTTON_LABEL' | translate }}
+        </button>
+      </ion-buttons>
+
+    </ion-col>
+  </ion-row>
+</ion-grid>

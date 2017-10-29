@@ -1,22 +1,57 @@
 import { Component } from '@angular/core';
+import { Modal, ModalController } from 'ionic-angular';
+import { Camera, CameraOptions, PictureSourceType } from '@ionic-native/camera';
 
-/**
- * Generated class for the ProfilePicturePickerComponent component.
- *
- * See https://angular.io/api/core/Component for more info on Angular
- * Components.
- */
 @Component({
   selector: 'picture-picker',
   templateUrl: 'picture-picker.html'
 })
 export class PicturePickerComponent {
 
-  text: string;
+  profilePicture: string = null;
 
-  constructor() {
-    console.log('Hello ProfilePicturePickerComponent Component');
-    this.text = 'Hello World';
+  cameraOptions: CameraOptions = {
+    quality: 90,
+    destinationType: this.camera.DestinationType.DATA_URL,
+    encodingType: this.camera.EncodingType.JPEG,
+    mediaType: this.camera.MediaType.PICTURE,
+    targetWidth: 100,
+    targetHeight: 100
+  };
+
+  constructor(private camera: Camera,
+              public modal: ModalController) {
   }
 
+  openPickerModeModal() {
+    const modalChooseSource: Modal = this.modal.create('ModalChoosePictureSourcePage');
+
+    modalChooseSource.present();
+
+    modalChooseSource.onDidDismiss((data) => {
+      if (typeof data.source === 'undefined') {
+        return;
+      }
+
+      switch (data.source) {
+        case 'localFile':
+          this.cameraOptions.sourceType = PictureSourceType.PHOTOLIBRARY;
+          break;
+        case 'camera':
+          this.cameraOptions.sourceType = PictureSourceType.CAMERA;
+          break;
+        default:
+          return;
+      }
+      this.getPicture();
+    })
+  }
+
+  getPicture() {
+    this.camera.getPicture(this.cameraOptions).then((imageData) => {
+      this.profilePicture = 'data:image/jpeg;base64,' + imageData;
+    }, (err) => {
+      console.error(err);
+    });
+  }
 }

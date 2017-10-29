@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { TranslateModule } from '@ngx-translate/core';
-import { GoogleMapMyPositionComponent } from "../../components/google-map-my-position/google-map-my-position";
 import { MapPage } from "./map";
+import { GoogleMapMyPositionModule } from "../../components/google-map-my-position/google-map-my-position.module";
 
 @NgModule({
   declarations: [
-    MapPage,
-    GoogleMapMyPositionComponent
+    MapPage
   ],
   imports: [
     IonicPageModule.forChild(MapPage),
-    TranslateModule.forChild()
+    TranslateModule.forChild(),
+    GoogleMapMyPositionModule
   ],
   exports: [
     MapPage
