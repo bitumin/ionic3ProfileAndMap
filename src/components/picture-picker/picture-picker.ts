@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Modal, ModalController } from 'ionic-angular';
 import { Camera, CameraOptions, PictureSourceType } from '@ionic-native/camera';
+import { DomSanitizer, SafeUrl } from "@angular/platform-browser";
 
 @Component({
   selector: 'picture-picker',
@@ -8,19 +9,21 @@ import { Camera, CameraOptions, PictureSourceType } from '@ionic-native/camera';
 })
 export class PicturePickerComponent {
 
-  profilePicture: string = null;
+  profilePicture: SafeUrl = null;
 
   cameraOptions: CameraOptions = {
-    quality: 100,
     destinationType: this.camera.DestinationType.DATA_URL,
-    encodingType: this.camera.EncodingType.PNG,
+    encodingType: this.camera.EncodingType.JPEG,
     mediaType: this.camera.MediaType.PICTURE,
     targetWidth: 100,
-    targetHeight: 100
+    targetHeight: 100,
+    allowEdit : true,
+    saveToPhotoAlbum: false
   };
 
   constructor(private camera: Camera,
-              public modal: ModalController) {
+              public modal: ModalController,
+              private domSanitizer: DomSanitizer) {
   }
 
   openPickerModeModal() {
@@ -49,7 +52,7 @@ export class PicturePickerComponent {
 
   getPicture() {
     this.camera.getPicture(this.cameraOptions).then((imageData) => {
-      this.profilePicture = 'data:image/jpeg;base64,' + imageData;
+      this.profilePicture = this.domSanitizer.bypassSecurityTrustUrl('data:image/jpeg;base64,' + imageData);
     }, (err) => {
       console.error(err);
     });

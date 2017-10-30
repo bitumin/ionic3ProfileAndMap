@@ -1,6 +1,6 @@
 <div class="content-avatar">
   <div class="avatar-bg">
-    <img *ngIf="!!this.profilePicture" src="{{this.profilePicture}}" alt="">
+    <img *ngIf="!!this.profilePicture" [src]="this.profilePicture" alt="">
     <ion-icon *ngIf="!this.profilePicture" ios="md-contact" md="md-contact" (click)="openPickerModeModal()"></ion-icon>
     <ion-fab right top *ngIf="!!this.profilePicture">
       <button ion-fab color="primary" (click)="openPickerModeModal()">
