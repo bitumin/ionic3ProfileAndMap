@@ -13,7 +13,7 @@ export class PicturePickerComponent {
   cameraOptions: CameraOptions = {
     quality: 100,
     destinationType: this.camera.DestinationType.DATA_URL,
-    encodingType: this.camera.EncodingType.JPEG,
+    encodingType: this.camera.EncodingType.PNG,
     mediaType: this.camera.MediaType.PICTURE,
     targetWidth: 100,
     targetHeight: 100
