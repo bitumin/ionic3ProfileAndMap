@@ -12,14 +12,17 @@
   },
   "PROFILE_FORM": {
     "USER_INFO": "Información de usuario",
-    "USERNAME_LABEL": "Nombre de usuario",
+    "USERNAME_LABEL": "Usuario",
     "USERNAME_PLACEHOLDER": "Juan Nieve",
-    "EMAIL_LABEL": "Correo electrónico",
+    "EMAIL_LABEL": "Email",
     "EMAIL_PLACEHOLDER": "juan.nieve@poniente.po",
     "PROFILE": "Perfil",
     "DESCRIPTION_DEFAULT": "No sé nada"
   },
-  "PICTURE_PICKER": {
-    "CHOOSE_AN_OPTION": "Elige una opción"
+  "MODAL_CHOOSE_PICTURE_SOURCE": {
+    "CHOOSE_AN_OPTION": "Elige una opción",
+    "MY_POSITION": "Mi posición",
+    "MAP_NOT_READY_ALERT_TITLE": "¡El mapa no está listo!",
+    "MAP_NOT_READY_ALERT_SUBTITLE": "El mapa está cargando. Por favor, espera."
   }
 }

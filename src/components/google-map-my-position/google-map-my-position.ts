@@ -7,6 +7,7 @@ import {
 } from '@ionic-native/google-maps';
 import { AlertController, Platform } from 'ionic-angular';
 import { Component } from '@angular/core';
+import { TranslateService } from "@ngx-translate/core";
 
 
 @Component({
@@ -23,14 +24,14 @@ export class GoogleMapMyPositionComponent {
 
   constructor(public alertCtrl: AlertController,
               public platform: Platform,
-              private googleMaps: GoogleMaps) {
+              private googleMaps: GoogleMaps,
+              public translateService: TranslateService) {
     this.myLatitude = '-';
     this.myLongitude = '-';
   }
 
   ngAfterViewInit() {
-    console.log('Loading Google Map...');
-    // this setTimeout solves the blank map issue:
+    // this setTimeout solves a blank map on load issue:
     // https://github.com/mapsplugin/cordova-plugin-googlemaps/issues/1472
     // https://github.com/mapsplugin/cordova-plugin-googlemaps/issues/256
     setTimeout(() => {
@@ -54,7 +55,6 @@ export class GoogleMapMyPositionComponent {
     this.map = this.googleMaps.create(this.mapElement, mapOptions);
 
     this.map.one(GoogleMapsEvent.MAP_READY).then(() => {
-      console.log('Map is ready!');
       this.mapIsReady = true;
     });
   }
@@ -81,7 +81,7 @@ export class GoogleMapMyPositionComponent {
         }).then(() => {
           this.map.setCameraZoom(11);
           this.map.addMarker({
-            title: 'My Position',
+            title:  this.translateService.instant('MODAL_CHOOSE_PICTURE_SOURCE.MY_POSITION'),
             position: newPosition
           });
         });
@@ -92,8 +92,8 @@ export class GoogleMapMyPositionComponent {
 
   showAlertMapNotReady() {
     let alert = this.alertCtrl.create({
-      title: 'Map is not ready yet!',
-      subTitle: 'Map is still loading, please wait.',
+      title: this.translateService.instant('MODAL_CHOOSE_PICTURE_SOURCE.MAP_NOT_READY_ALERT_TITLE'),
+      subTitle: this.translateService.instant('MODAL_CHOOSE_PICTURE_SOURCE.MAP_NOT_READY_ALERT_SUBTITLE'),
       buttons: ['OK']
     });
     alert.present();

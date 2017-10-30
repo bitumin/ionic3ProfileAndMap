@@ -19,7 +19,10 @@
     "PROFILE": "Profile",
     "DESCRIPTION_DEFAULT": "I know nothing"
   },
-  "PICTURE_PICKER": {
-    "CHOOSE_AN_OPTION": "Choose an option"
+  "MODAL_CHOOSE_PICTURE_SOURCE": {
+    "CHOOSE_AN_OPTION": "Choose an option",
+    "MY_POSITION": "My position",
+    "MAP_NOT_READY_ALERT_TITLE": "Map is not ready yet!",
+    "MAP_NOT_READY_ALERT_SUBTITLE": "Map is still loading, please wait."
   }
 }

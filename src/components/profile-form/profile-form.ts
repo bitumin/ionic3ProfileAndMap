@@ -12,11 +12,7 @@ import { Component } from '@angular/core';
 })
 export class ProfileFormComponent {
 
-  text: string;
-
   constructor() {
-    console.log('Hello ProfileFormComponent Component');
-    this.text = 'Hello World';
   }
 
 }

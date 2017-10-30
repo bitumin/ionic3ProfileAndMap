@@ -1,20 +1,36 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>ModalChoosePictureSource</ion-title>
+    <ion-title>
+      {{ 'MODAL_CHOOSE_PICTURE_SOURCE.CHOOSE_AN_OPTION' | translate }}
+    </ion-title>
     <ion-buttons end>
-      <button ion-button (click)="dismissModal()">
-        Close
+      <button ion-button icon-only (click)="dismissModal()">
+        <ion-icon name="close"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-  <ion-buttons end>
-    <button ion-button (click)="dismissModal('camera')">
-      Camera
-    </button>
-    <button ion-button (click)="dismissModal('localFile')">
-      Local file
-    </button>
-  </ion-buttons>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+
+        <ion-buttons>
+          <button ion-button block large icon-only color="light" (click)="dismissModal('camera')">
+            <ion-icon name="camera"></ion-icon>
+          </button>
+        </ion-buttons>
+
+      </ion-col>
+      <ion-col col-6>
+
+        <ion-buttons>
+          <button ion-button block large icon-only color="light" (click)="dismissModal('localFile')">
+            <ion-icon name="image"></ion-icon>
+          </button>
+        </ion-buttons>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

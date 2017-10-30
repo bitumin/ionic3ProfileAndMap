@@ -11,7 +11,7 @@ export class PicturePickerComponent {
   profilePicture: string = null;
 
   cameraOptions: CameraOptions = {
-    quality: 90,
+    quality: 100,
     destinationType: this.camera.DestinationType.DATA_URL,
     encodingType: this.camera.EncodingType.JPEG,
     mediaType: this.camera.MediaType.PICTURE,

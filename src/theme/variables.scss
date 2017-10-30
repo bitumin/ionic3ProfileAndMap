@@ -86,3 +86,9 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+// Custom modals: no-full-screen, with backdrop
+ion-modal {
+  padding: 50% 30px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
